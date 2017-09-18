@@ -41,8 +41,8 @@ public class Librury {
                 if(count > maxAmount){
                     System.out.println(x + " - й человек ждет входа в библиотеку");
                 }
-                door.doorOutside(x);
                 try {
+                    door.doorOutside(x);
                     semaphore.acquire();
                     count++;
                 } catch (InterruptedException e) {
